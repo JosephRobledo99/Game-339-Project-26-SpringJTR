@@ -17,6 +17,13 @@ public class StringServiceTests
     [TestCase("", "")]
     [TestCase("a", "a")]
     [TestCase("racecar", "racecar")]
+
+    //added
+    [TestCase("919", "919")]
+    [TestCase("!??!", "!??!")]
+    [TestCase("安吉拉", "拉吉安")]
+    [TestCase("The Sentence", "ecnetneS ehT")]
+
     public void Reverse_ReturnsExpectedString(string input, string expected)
     {
         // Act
