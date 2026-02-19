@@ -39,4 +39,19 @@ public class StringServiceTests
         // Act & Assert
         Assert.Throws<System.ArgumentNullException>(() => _svc.Reverse(null));
     }
+
+
+    [TestCase("919", "919")]
+    [TestCase("Good Sandy", "dooG ydnaS")]
+
+
+    public void ReverseWords_ReturnsExpectedString(string input, string expected)
+    {
+        // Act
+        var result = _svc.ReverseWords(input);
+
+        // Assert
+        Assert.That(result, Is.EqualTo(expected));
+
+    }
 }
